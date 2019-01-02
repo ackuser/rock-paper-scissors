@@ -43,7 +43,10 @@ Yes, I separate as much as I could; each component has its own template
 
 Just clone the project
 ```sh
-$ git clone .....
+$ git clone https://github.com/ackuser/rock-paper-scissors.git
+$ npm i http-server
+$ cd rock-paper-scissors
+$ http-server
 ```
 And then open the index.html in a browser
 
