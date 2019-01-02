@@ -1,0 +1,173 @@
+/**
+* Define variables
+*/
+:root {
+    --border: #888888;
+    --text: #141414;
+    --text-secondary: #555555;
+}
+
+/** 
+* Core styles 
+*/
+html {
+    height: 100%;
+    font-size: 16px;
+    background: #f3f3f3;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 2rem 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu,
+                    Cantarell, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--text);
+}
+
+@media all and (min-width: 40em) {
+    main {
+        width: 90vw;
+        max-width: 40em;
+        margin: 0 auto
+    }
+}
+
+/**
+* Intro 
+*/
+.intro {
+    padding: 0 0 1rem 0;
+    margin: 0 0 2rem 0;
+    border-bottom: 1px dotted var(--border);
+}
+
+.intro__summary {
+    margin-top: 0.3rem;
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+.intro__summary b {
+    font-weight: 500;
+}
+
+.js-count {
+    width: 100%;
+    text-align: center;
+    line-height: 1;
+    font-size: 3rem;
+}
+
+.js-count small {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+}
+
+.js-count > div {
+    min-height: 300px;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.js-count > div > img {
+    display:block;
+    margin:auto;
+}
+
+
+.js-player-1,
+.js-robot-player2 {
+    width: 100%;
+    margin: 5% 5% 0 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.js-player-1> img,
+.js-robot-player2 > img {
+    height: 128px;
+}
+
+.js-robot-player2 {
+    transform: rotate(180deg);
+}
+
+.ripple-out {
+    animation-name: ripple-out;
+    animation-duration: 1s;
+}
+
+@keyframes ripple-out {
+    0% {
+        -webkit-transform: scale(1);
+    }
+
+    75% {
+        -webkit-transform: scale(1.5);
+        opacity: 1;
+    }
+    
+    100% {
+        -webkit-transform: scale(1.75);
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+}
+
+/* Center the loader */
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Add animation to "page content" */
+  .animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+  }
+  
+  @-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+  }
+  
+  @keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+  }
+/*   
+  #myDiv {
+    display: none;
+    text-align: center;
+  } */
